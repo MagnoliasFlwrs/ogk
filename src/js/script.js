@@ -55,3 +55,22 @@ backBtns.forEach(el=> {
         droprightScreen.classList.remove('active');
     })
 })
+
+
+// header-dropdown
+
+const headerDropdown = document.querySelector('.dropdown');
+const submenu = document.querySelector(' .submenu');
+
+headerDropdown?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    submenu.classList.add('open');
+});
+document.addEventListener('click', (e) => {
+    if (
+        submenu.classList.contains('open') &&
+        !e.target.closest('.submenu')
+    ) {
+        submenu.classList.remove('open');
+    }
+});
