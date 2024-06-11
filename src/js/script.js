@@ -74,3 +74,69 @@ document.addEventListener('click', (e) => {
         submenu.classList.remove('open');
     }
 });
+
+
+const mainSwiper = document.querySelector('.main-swiper');
+
+if (mainSwiper) {
+    const swiper1 = new Swiper(mainSwiper, {
+        loop: true,
+        pagination: {
+            el: '.custom-swiper-pagination',
+            clickable: true
+        },
+        navigation: {
+            nextEl: '.custom-swiper-button-next',
+            prevEl: '.custom-swiper-button-prev',
+        },
+    });
+}
+
+const saleSwiper = document.querySelector('.sale-swiper');
+
+let swiper2;
+if (saleSwiper) {
+    swiper2 = new Swiper(saleSwiper, {
+        loop: true,
+        direction: 'vertical',
+        slidesPerView: 4,
+        spaceBetween:30,
+        navigation: {
+            nextEl: '.sale-custom-swiper-button-next',
+            prevEl: '.sale-custom-swiper-button-prev',
+        },
+        breakpoints: {
+            590: {
+                direction: 'horizontal',
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            830: {
+                direction: 'horizontal',
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            1150: {
+                direction: 'horizontal',
+                slidesPerView: 4,
+                spaceBetween: 30
+            },
+            1250: {
+                direction: 'horizontal',
+                slidesPerView: 4,
+                spaceBetween: 50
+            }
+        }
+    });
+}
+const handleResize = () => {
+    if (window.innerWidth < 590) {
+        swiper2.disable();
+    } else {
+        swiper2.enable();
+    }
+};
+
+handleResize();
+
+window.addEventListener('resize', handleResize);
