@@ -140,3 +140,77 @@ const handleResize = () => {
 handleResize();
 
 window.addEventListener('resize', handleResize);
+
+
+// modals
+
+const overlay = document.querySelector('.overlay')
+const showModal = (modal) => {
+    overlay.classList.add('open');
+    modal.classList.add('active');
+}
+const closeModal = (modal) => {
+    overlay.addEventListener('click' , () => {
+        overlay.classList.remove('open');
+        modal.classList.remove('active');
+    })
+    const closeBtn =  modal.querySelector('.close-btn');
+    closeBtn.addEventListener('click' , () => {
+        overlay.classList.remove('open');
+        modal.classList.remove('active');
+    })
+}
+
+const showContactsModalBtns =  document.querySelectorAll('.show-contacts-modal');
+const showPartnersModalBtns = document.querySelectorAll('.show-partners-modal');
+const contactsModal = document.querySelector('.contacts-modal');
+const partnersModal = document.querySelector('.partners-modal');
+
+showPartnersModalBtns?.forEach(el=> {
+    el.addEventListener('click' , (e) => {
+        e.preventDefault();
+        showModal(partnersModal);
+        closeModal(partnersModal);
+    })
+})
+showContactsModalBtns?.forEach(el=> {
+    el.addEventListener('click' , (e) => {
+        e.preventDefault();
+        showModal(contactsModal);
+        closeModal(contactsModal);
+    })
+})
+
+// accordeon
+
+
+const boxes = document.querySelectorAll(".box .show-icon");
+
+boxes.forEach((box) => {
+    box.addEventListener("click", boxHandler);
+});
+
+function boxHandler(e) {
+    e.preventDefault();
+    let currentBox = e.target.closest(".box");
+    let currentContent = currentBox.querySelector('.content');
+    let currentHide =  e.target.closest(".box").querySelector('.hide');
+
+    console.log(currentHide);
+
+    currentBox.classList.toggle("active");
+
+    if (currentHide) {
+        currentHide.addEventListener('click' , (e)=> {
+            e.stopPropagation();
+            e.preventDefault()
+            currentBox.classList.remove('active');
+            currentContent.style.maxHeight = 0;
+        })
+    }
+    if (currentBox.classList.contains("active")) {
+        currentContent.style.maxHeight = currentContent.scrollHeight + "px";
+    } else {
+        currentContent.style.maxHeight = 0;
+    }
+}
