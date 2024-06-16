@@ -100,7 +100,7 @@ body {
 
     .content {
       position: relative;
-      z-index: 2;
+      z-index: 10;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -171,7 +171,7 @@ body {
           top: 0;
           left: -2100px;
           opacity: 0;
-          z-index: 3;
+          z-index: 10;
           transition: .5s ease;
           &.active {
             left: 0;

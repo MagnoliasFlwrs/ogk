@@ -104,7 +104,7 @@ body {
 }
 .header .logo-row .content {
   position: relative;
-  z-index: 2;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -184,7 +184,7 @@ body {
   top: 0;
   left: -2100px;
   opacity: 0;
-  z-index: 3;
+  z-index: 10;
   transition: 0.5s ease;
 }
 .header .logo-row .content .column .mobile-menu.active {
