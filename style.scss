@@ -634,6 +634,79 @@ body {
         }
       }
     }
+    .mob-app-block {
+      width: 390px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .mob-app-card {
+        border-radius: 5px;
+        background: #5A423B;
+        display: flex;
+        width: 100%;
+        padding: 10px 30px;
+        align-items: center;
+        gap: 20px;
+        &:hover {
+          background: var(--green);
+          p {
+            color: #22272A;
+          }
+          span {
+            color: #22272A;
+          }
+        }
+        &.apple {
+          &:hover {
+            svg path {
+              fill: #22272A;
+            }
+          }
+        }
+        span {
+          color: #ACA09D;
+          font-family: "Open Sans";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-transform: uppercase;
+        }
+        p {
+          color: #FFF;
+          font-family: "Open Sans";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: normal;
+          letter-spacing: -1.2px;
+        }
+      }
+      .mob-app-banner {
+        padding: 30px;
+        flex-grow: 1;
+        background-image: url("./src/images/ad2.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        @media (max-width: 1050px) {
+          display: none;
+        }
+        .text  {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          max-width: 143px;
+          p {
+            color: #22272A;
+            font-family: "Open Sans";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+          }
+        }
+      }
+    }
 
   }
 }

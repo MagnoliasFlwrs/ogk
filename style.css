@@ -632,6 +632,77 @@ body {
   font-weight: 400;
   line-height: normal;
 }
+.block1 .content .mob-app-block {
+  width: 390px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.block1 .content .mob-app-block .mob-app-card {
+  border-radius: 5px;
+  background: #5A423B;
+  display: flex;
+  width: 100%;
+  padding: 10px 30px;
+  align-items: center;
+  gap: 20px;
+}
+.block1 .content .mob-app-block .mob-app-card:hover {
+  background: var(--green);
+}
+.block1 .content .mob-app-block .mob-app-card:hover p {
+  color: #22272A;
+}
+.block1 .content .mob-app-block .mob-app-card:hover span {
+  color: #22272A;
+}
+.block1 .content .mob-app-block .mob-app-card.apple:hover svg path {
+  fill: #22272A;
+}
+.block1 .content .mob-app-block .mob-app-card span {
+  color: #ACA09D;
+  font-family: "Open Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.block1 .content .mob-app-block .mob-app-card p {
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -1.2px;
+}
+.block1 .content .mob-app-block .mob-app-banner {
+  padding: 30px;
+  flex-grow: 1;
+  background-image: url("./src/images/ad2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 1050px) {
+  .block1 .content .mob-app-block .mob-app-banner {
+    display: none;
+  }
+}
+.block1 .content .mob-app-block .mob-app-banner .text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 143px;
+}
+.block1 .content .mob-app-block .mob-app-banner .text p {
+  color: #22272A;
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
 
 .sales-block {
   padding: 50px 0;
