@@ -128,18 +128,19 @@ if (saleSwiper) {
             }
         }
     });
+    const handleResize = () => {
+        if (window.innerWidth < 590) {
+            swiper2.disable();
+        } else {
+            swiper2.enable();
+        }
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
 }
-const handleResize = () => {
-    if (window.innerWidth < 590) {
-        swiper2.disable();
-    } else {
-        swiper2.enable();
-    }
-};
 
-handleResize();
-
-window.addEventListener('resize', handleResize);
 
 
 // modals
@@ -163,8 +164,18 @@ const closeModal = (modal) => {
 
 const showContactsModalBtns =  document.querySelectorAll('.show-contacts-modal');
 const showPartnersModalBtns = document.querySelectorAll('.show-partners-modal');
+const showAboutModalBtns = document.querySelectorAll('.show-partners-modal');
+const showAzsModalBtns = document.querySelectorAll('.show-azs-modal');
+const showCardsModalBtns = document.querySelectorAll('.show-cards-modal');
+const showSaleSingleModalBtns = document.querySelectorAll('.show-sale-single-modal');
+const showNewsSingleModalBtns = document.querySelectorAll('.news-card');
 const contactsModal = document.querySelector('.contacts-modal');
 const partnersModal = document.querySelector('.partners-modal');
+const aboutModal = document.querySelector('.about-modal');
+const azsModal = document.querySelector('.azs-modal');
+const cardsModal = document.querySelector('.cards-modal');
+const saleSingleModal = document.querySelector('.sale-single-modal');
+const newsSingleModal = document.querySelector('.news-single-modal');
 
 showPartnersModalBtns?.forEach(el=> {
     el.addEventListener('click' , (e) => {
@@ -178,6 +189,45 @@ showContactsModalBtns?.forEach(el=> {
         e.preventDefault();
         showModal(contactsModal);
         closeModal(contactsModal);
+    })
+})
+
+showAboutModalBtns?.forEach(el=> {
+    el.addEventListener('click' , (e) => {
+        e.preventDefault();
+        showModal(aboutModal);
+        closeModal(aboutModal);
+    })
+})
+
+showAzsModalBtns?.forEach(el=> {
+    el.addEventListener('click' , (e) => {
+        e.preventDefault();
+        showModal(azsModal);
+        closeModal(azsModal);
+    })
+})
+
+showCardsModalBtns?.forEach(el=> {
+    el.addEventListener('click' , (e) => {
+        e.preventDefault();
+        showModal(cardsModal);
+        closeModal(cardsModal);
+    })
+})
+
+showSaleSingleModalBtns?.forEach(el=> {
+    el.addEventListener('click' , (e) => {
+        e.preventDefault();
+        showModal(saleSingleModal);
+        closeModal(saleSingleModal);
+    })
+})
+showNewsSingleModalBtns?.forEach(el=> {
+    el.addEventListener('click' , (e) => {
+        e.preventDefault();
+        showModal(newsSingleModal);
+        closeModal(newsSingleModal);
     })
 })
 

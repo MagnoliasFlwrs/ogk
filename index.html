@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="overlay"></div>
-    <div class="modal contacts-modal active">
+    <div class="modal contacts-modal ">
         <div class="head-row">
             <h2>Контакты</h2>
             <span class="close-btn">
@@ -808,6 +808,32 @@
             </div>
         </div>
     </div>
+    <div class="modal cards-modal ">
+        <div class="head-row">
+            <h2>Топливные и бонусные карты</h2>
+            <span class="close-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#22272A"/>
+                </svg>
+            </span>
+        </div>
+        <div class="modal-content">
+            <div class="banner">
+                <img src="./src/images/img4.png" alt="banner-image">
+            </div>
+            <div class="text-content">
+                <p class="blue-title">Правила участия в программе лояльности физических лиц с использованием бонусных карт ОГК и ЭкоМетан</p>
+                <p class="chapter-title"> НАЧИСЛЕНИЕ БОНУСНЫХ БАЛЛОВ</p>
+                <p><span>1.1</span>Начисление баллов осуществляется только за приобретенные участником топливо и товар, реализуемый в сети объектов организатора.</p>
+                <p><span>1.2</span>Размер начислений зависит от вида топлива:</p>
+                <ul>
+                    <li>При заправке Бензином АИ-92, АИ-95, Дт - 1%</li>
+                    <li>При заправке газом Пропан-бутаном бонусы с 23.07.2021 не начисляются! </li>
+                    <li>При заправке МЕТАНОМ - 10%</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <header class="header">
         <div class="logo-row">
             <div class="content">
@@ -853,16 +879,16 @@
                         </div>
                         <ul>
                             <li>
-                                <a href="#">О компании</a>
+                                <a class="show-about-modal" href="#">О компании</a>
                             </li>
                             <li>
-                                <a href="#">Новости</a>
+                                <a href="/news.html">Новости</a>
                             </li>
                             <li>
-                                <a href="#">Акции</a>
+                                <a href="/promotions.html">Акции</a>
                             </li>
                             <li>
-                                <a  href="#">Сеть АЗС</a>
+                                <a class="show-azs-modal" href="#">Сеть АЗС</a>
                             </li>
                             <li>
                                 <a class="show-partners-modal" href="#">Наши партнеры</a>
@@ -888,11 +914,11 @@
             <div class="content">
                 <ul>
                     <li>
-                        <a href="#">О компании</a>
+                        <a class="show-about-modal" href="#">О компании</a>
                         <div class="line"></div>
                     </li>
                     <li>
-                        <a href="#">Акции</a>
+                        <a href="./promotions.html">Акции</a>
                         <div class="line"></div>
                     </li>
                     <li>
@@ -900,18 +926,18 @@
                         <div class="line"></div>
                         <div class="submenu">
                             <ul>
-                                <li><a href="#">Топливные карты</a></li>
-                                <li><a href="#">Бонусные карты</a></li>
-                                <li><a href="#">Скидочные карты</a></li>
+                                <li><a class="show-cards-modal" href="#">Топливные карты</a></li>
+                                <li><a class="show-cards-modal" href="#">Бонусные карты</a></li>
+                                <li><a class="show-cards-modal" href="#">Скидочные карты</a></li>
                             </ul>
                         </div>
                     </li>
                     <li>
-                        <a href="#">Новости</a>
+                        <a href="/news.html">Новости</a>
                         <div class="line"></div>
                     </li>
                     <li>
-                        <a href="#">Сеть азс</a>
+                        <a class="show-azs-modal" href="#">Сеть азс</a>
                         <div class="line"></div>
                     </li>
                     <li>
@@ -995,7 +1021,7 @@
                             <div class="sale-content">
                                 <p>Торты по цене производителя - только в эти выходные!</p>
                                 <div class="link">
-                                    <a href="#">
+                                    <a href="#" class="show-sale-single-modal">
                                         <span>Подробнее</span>
                                         <span class="icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
@@ -1027,7 +1053,7 @@
                             <div class="sale-content">
                                 <p>Все для идеального пикника!</p>
                                 <div class="link">
-                                    <a href="#">
+                                    <a href="#" class="show-sale-single-modal">
                                         <span>Подробнее</span>
                                         <span class="icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
@@ -1056,7 +1082,7 @@
                             <div class="sale-content">
                                 <p>Блинчики с пылу с жару на АЗС ОГК!</p>
                                 <div class="link">
-                                    <a href="#">
+                                    <a href="#" class="show-sale-single-modal">
                                         <span>Подробнее</span>
                                         <span class="icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
@@ -1085,7 +1111,7 @@
                             <div class="sale-content">
                                 <p>Заправляйтесь и заботьтесь о своем авто!</p>
                                 <div class="link">
-                                    <a href="#">
+                                    <a href="#" class="show-sale-single-modal">
                                         <span>Подробнее</span>
                                         <span class="icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
@@ -1119,7 +1145,7 @@
                             <div class="sale-content">
                                 <p>Торты по цене производителя - только в эти выходные!</p>
                                 <div class="link">
-                                    <a href="#">
+                                    <a href="#" class="show-sale-single-modal">
                                         <span>Подробнее</span>
                                         <span class="icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
@@ -1151,7 +1177,7 @@
                             <div class="sale-content">
                                 <p>Все для идеального пикника!</p>
                                 <div class="link">
-                                    <a href="#">
+                                    <a href="#" class="show-sale-single-modal">
                                         <span>Подробнее</span>
                                         <span class="icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
@@ -1180,7 +1206,7 @@
                             <div class="sale-content">
                                 <p>Блинчики с пылу с жару на АЗС ОГК!</p>
                                 <div class="link">
-                                    <a href="#">
+                                    <a href="#" class="show-sale-single-modal">
                                         <span>Подробнее</span>
                                         <span class="icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
@@ -1209,7 +1235,7 @@
                             <div class="sale-content">
                                 <p>Заправляйтесь и заботьтесь о своем авто!</p>
                                 <div class="link">
-                                    <a href="#">
+                                    <a href="#" class="show-sale-single-modal">
                                         <span>Подробнее</span>
                                         <span class="icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
@@ -1236,7 +1262,7 @@
             </div>
         </div>
         <div class="content">
-            <a href="#" class="show-more-link">
+            <a href="/promotions.html" class="show-more-link">
                 <span>Смотреть все акции</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                     <path d="M9.29289 5.79289C8.90237 6.18342 8.90237 6.81658 9.29289 7.20711L14.5858 12.5L9.29289 17.7929C8.90237 18.1834 8.90237 18.8166 9.29289 19.2071C9.68342 19.5976 10.3166 19.5976 10.7071 19.2071L16.7071 13.2071C17.0976 12.8166 17.0976 12.1834 16.7071 11.7929L10.7071 5.79289C10.3166 5.40237 9.68342 5.40237 9.29289 5.79289Z" fill="#22272A"/>
@@ -1258,14 +1284,14 @@
                     <span>Мы в соцсетях</span>
                 </div>
             </div>
-            <div class="news-card">
+            <a href="#" class="news-card">
                 <img src="./src/images/news1.png" alt="news-card-img">
                 <div class="shadow"></div>
                 <div class="card-content">
                     <span>15.05.2024</span>
                     <p>Не исчез и стал российским: 5 фактов о Lada Largus</p>
                 </div>
-            </div>
+            </a>
             <a href='#' class="news-card">
                 <img src="./src/images/news2.png" alt="news-card-img">
                 <div class="shadow"></div>
@@ -1292,7 +1318,7 @@
             </a>
         </div>
         <div class="content">
-            <a href="#" class="show-more-link">
+            <a href="/news.html" class="show-more-link">
                 <span>Смотреть все новости</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                     <path d="M9.29289 5.79289C8.90237 6.18342 8.90237 6.81658 9.29289 7.20711L14.5858 12.5L9.29289 17.7929C8.90237 18.1834 8.90237 18.8166 9.29289 19.2071C9.68342 19.5976 10.3166 19.5976 10.7071 19.2071L16.7071 13.2071C17.0976 12.8166 17.0976 12.1834 16.7071 11.7929L10.7071 5.79289C10.3166 5.40237 9.68342 5.40237 9.29289 5.79289Z" fill="#22272A"/>
