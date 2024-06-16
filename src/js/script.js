@@ -164,7 +164,7 @@ const closeModal = (modal) => {
 
 const showContactsModalBtns =  document.querySelectorAll('.show-contacts-modal');
 const showPartnersModalBtns = document.querySelectorAll('.show-partners-modal');
-const showAboutModalBtns = document.querySelectorAll('.show-partners-modal');
+const showAboutModalBtns = document.querySelectorAll('.show-about-modal');
 const showAzsModalBtns = document.querySelectorAll('.show-azs-modal');
 const showCardsModalBtns = document.querySelectorAll('.show-cards-modal');
 const showSaleSingleModalBtns = document.querySelectorAll('.show-sale-single-modal');
