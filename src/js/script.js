@@ -62,9 +62,13 @@ backBtns.forEach(el=> {
 const headerDropdown = document.querySelector('.dropdown');
 const submenu = document.querySelector(' .submenu');
 
-headerDropdown?.addEventListener('click', (e) => {
+headerDropdown?.closest('li').addEventListener('mouseover', (e) => {
     e.stopPropagation();
     submenu.classList.add('open');
+});
+headerDropdown?.closest('li').addEventListener('mouseout', (e) => {
+    e.stopPropagation();
+    submenu.classList.remove('open');
 });
 document.addEventListener('click', (e) => {
     if (
@@ -155,11 +159,14 @@ const closeModal = (modal) => {
         overlay.classList.remove('open');
         modal.classList.remove('active');
     })
-    const closeBtn =  modal.querySelector('.close-btn');
-    closeBtn.addEventListener('click' , () => {
-        overlay.classList.remove('open');
-        modal.classList.remove('active');
+    const closeBtns =  modal.querySelectorAll('.close-btn');
+    closeBtns?.forEach(closeBtn => {
+        closeBtn.addEventListener('click' , () => {
+            overlay.classList.remove('open');
+            modal.classList.remove('active');
+        })
     })
+
 }
 
 const showContactsModalBtns =  document.querySelectorAll('.show-contacts-modal');
@@ -234,7 +241,7 @@ showNewsSingleModalBtns?.forEach(el=> {
 // accordeon
 
 
-const boxes = document.querySelectorAll(".box .show-icon");
+const boxes = document.querySelectorAll(".box");
 
 boxes.forEach((box) => {
     box.addEventListener("click", boxHandler);
