@@ -279,6 +279,83 @@ body {
               }
             }
           }
+          .mob-app-block {
+            padding: 0 25px 0 40px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .mob-app-card {
+              border-radius: 5px;
+              background: #3E4143;
+              display: flex;
+              width: 100%;
+              padding: 10px 20px;
+              align-items: center;
+              gap: 20px;
+              @media (min-width: 450px) {
+                width: 330px;
+              }
+              &:hover {
+                background: var(--green);
+                p {
+                  color: #22272A;
+                }
+                span {
+                  color: #22272A;
+                }
+              }
+              &.apple {
+                &:hover {
+                  svg path {
+                    fill: #22272A;
+                  }
+                }
+              }
+              span {
+                color: #ACA09D;
+                font-family: "Open Sans";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-transform: uppercase;
+              }
+              p {
+                color: #FFF;
+                font-family: "Open Sans";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: normal;
+                letter-spacing: -1.2px;
+              }
+            }
+            .mob-app-banner {
+              padding: 30px;
+              flex-grow: 1;
+              background-image: url("./src/images/ad2.png");
+              background-repeat: no-repeat;
+              background-size: cover;
+              @media (max-width: 1050px) {
+                display: none;
+              }
+              .text  {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                max-width: 143px;
+                p {
+                  color: #22272A;
+                  font-family: "Open Sans";
+                  font-size: 20px;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: normal;
+                }
+              }
+            }
+          }
           .mobile-contacts {
             padding: 0 25px 0 40px;
             width: 100%;
@@ -289,8 +366,6 @@ body {
 
             ul {
               padding: 0;
-              padding-top: 50px;
-              border-top: 1px solid #575D61;
               display: flex;
               flex-direction: column;
               gap: 50px;
@@ -440,6 +515,7 @@ body {
   }
   .mobile-logo-line {
     width: 100%;
+    margin: 7px 0;
     display: none;
     @media (max-width: 1050px) {
       display: block;
@@ -450,6 +526,7 @@ body {
       position: relative;
       height: 83px;
       padding: 0;
+
       width: 100%;
       background: white;
       @media (max-width: 500px) {
