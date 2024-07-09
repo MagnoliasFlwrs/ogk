@@ -132,17 +132,17 @@ if (saleSwiper) {
             }
         }
     });
-    const handleResize = () => {
-        if (window.innerWidth < 590) {
-            swiper2.disable();
-        } else {
-            swiper2.enable();
-        }
-    };
-
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
+    // const handleResize = () => {
+    //     if (window.innerWidth < 590) {
+    //         swiper2.disable();
+    //     } else {
+    //         swiper2.enable();
+    //     }
+    // };
+    //
+    // handleResize();
+    //
+    // window.addEventListener('resize', handleResize);
 }
 
 
